@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<beans>
+		<bean id="firstBean" class="com.codepreplabs.bean.FirstBean">
+			<property name="firstMessage" value="demo of idref tag in Spring"/>
+		</bean>
+		
+		<bean id="secondBean" class="com.codepreplabs.bean.SecondBean">
+			<property name="secondMessage">
+				<idref bean="firstBean"/>
+			</property>
+		</bean>
+	</beans>
+
+
+</beans>

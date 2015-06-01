@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- inner bean declaration for setter based dependency injection -->
+<!--	<beans>
+		<bean id="outerBean" class="com.codepreplabs.bean.OuterBean">
+			<property name="innerBean">
+				<bean class="com.codepreplabs.bean.InnerBean">
+					<property name="message" value="the inner bean message"></property>
+				</bean>
+			</property>
+		</bean>
+	</beans>  -->
+	
+	<!-- inner bean declaration for constructor based dependency injection  -->
+	<beans>
+		<bean id="outerBean" class="com.codepreplabs.bean.OuterBean">
+			<constructor-arg name="innerBean">
+				<bean class="com.codepreplabs.bean.InnerBean">
+					<constructor-arg name="message" value="the inner bean message" />
+				</bean>
+			</constructor-arg>
+		</bean>
+	</beans>
+
+</beans>

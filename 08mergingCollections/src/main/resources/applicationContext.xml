@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+	<bean id="parent" abstract="true" class="com.codepreplabs.bean.ComplexObject">
+		<property name="adminEmails" >
+			<props>
+				<prop key="administrator">admin@codepreplabs.com</prop>
+				<prop key="support">support@example.com</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="child" parent="parent" class="com.codepreplabs.bean.SimpleObject">
+		<property name="adminEmails">
+			<props merge="true">
+				<prop key="sales">sales@codepreplabs.com</prop>
+				<prop key="info">info@codepreplabs.com</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

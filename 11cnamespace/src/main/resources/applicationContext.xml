@@ -1,0 +1,29 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="bar" class="com.codepreplabs.bean.Bar">
+		<constructor-arg type="String" value="This is bar" ></constructor-arg>
+	</bean>
+	
+	<bean id="baz" class="com.codepreplabs.bean.Baz">
+		<constructor-arg type="String" value="This is baz"></constructor-arg>
+	</bean>
+	
+	<!-- example of classic declaration of constructor args -->
+	
+	<bean id="foo-classic" class="com.codepreplabs.bean.Foo">
+		<constructor-arg index="0" ref="baz"></constructor-arg>
+		<constructor-arg index="1" ref="bar"></constructor-arg>
+		<constructor-arg index="2" value="foo@classic.in"></constructor-arg>
+	</bean>
+	
+	<!-- example for constructor args declaration using p-namespace -->
+	
+	<bean id="foo-modern" class="com.codepreplabs.bean.Foo" 
+	c:baz-ref="baz"
+	c:bar-ref="bar"
+	c:email="foo@modern.in"></bean>
+	
+</beans>

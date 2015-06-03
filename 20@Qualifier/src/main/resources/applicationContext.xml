@@ -1,0 +1,26 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+	
+	<context:annotation-config/>
+
+	<bean id="employee" class="com.codepreplabs.bean.Employee">
+		<property name="employeeId" value="83"></property>
+		<property name="employeeName" value="Jhon Doe"></property>
+	</bean>
+	
+	<bean id="department1" class="com.codepreplabs.bean.Department">
+		<property name="departmentId" value="10"></property>
+		<property name="name" value="Computer Science"></property>
+	</bean>
+	
+	<bean id="department2" class="com.codepreplabs.bean.Department">
+		<property name="departmentId" value="20"></property>
+		<property name="name" value="Bio Informatics"></property>
+	</bean>
+
+</beans>

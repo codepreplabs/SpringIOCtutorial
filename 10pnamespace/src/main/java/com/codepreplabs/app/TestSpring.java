@@ -13,7 +13,6 @@ public class TestSpring {
 		BasicConfigurator.configure();
 	}
 
-	@SuppressWarnings({ "unchecked", "unused" })
 	public static void main(String[] args) {
 
 		@SuppressWarnings("resource")

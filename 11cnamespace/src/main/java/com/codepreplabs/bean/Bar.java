@@ -3,7 +3,6 @@ package com.codepreplabs.bean;
 public class Bar {
 
 	public Bar() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Bar(String name) {

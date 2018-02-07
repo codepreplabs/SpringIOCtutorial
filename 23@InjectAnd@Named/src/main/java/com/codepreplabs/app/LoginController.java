@@ -40,5 +40,6 @@ public class LoginController {
 		}
 
 		System.out.println(loginService.validateLogin(username, password));
+		scanner.close();
 	}
 }

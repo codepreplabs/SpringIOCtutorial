@@ -5,7 +5,6 @@ public class Baz {
 	private String name;
 
 	public Baz() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Baz(String name) {

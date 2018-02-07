@@ -7,7 +7,6 @@ public class Foo {
 	private String email;
 
 	public Foo() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Foo(Baz baz, Bar bar, String email) {

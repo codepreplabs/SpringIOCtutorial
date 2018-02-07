@@ -3,10 +3,7 @@ package com.codepreplabs.app;
 import java.util.Scanner;
 
 import org.apache.log4j.BasicConfigurator;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 
 import com.codepreplabs.bean.LoginService;
@@ -42,5 +39,7 @@ public class LoginController {
 		}
 
 		System.out.println(loginService.validateLogin(username, password));
+		scanner.close();
+		applicationContext.close();
 	}
 }

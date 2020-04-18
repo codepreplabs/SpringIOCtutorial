@@ -9,7 +9,6 @@ import com.codepreplabs.bean.HelloBean;
 public class TestSpring {
 	
 	static{
-		
 		BasicConfigurator.configure();
 	}
 

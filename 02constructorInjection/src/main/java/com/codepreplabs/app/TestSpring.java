@@ -11,7 +11,6 @@ public class TestSpring {
 	private static ApplicationContext applicationContext;
 
 	static{
-		
 		BasicConfigurator.configure();
 	}
 

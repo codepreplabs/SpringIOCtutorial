@@ -7,7 +7,6 @@ public class BaseDAOImpl {
 	BaseTO baseTO;
 	
 	public BaseDAOImpl() {
-
 	}
 	
 	public BaseDAOImpl(BaseTO baseTO) {

@@ -6,20 +6,22 @@
 	<artifactId>02constructorInjection</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<properties>
-		<java.version>1.8</java.version>
-	</properties>
+	<parent>
+		<groupId>com.codeprep.springIOC</groupId>
+		<artifactId>SpringIOCtutorial</artifactId>
+		<version>1.0.0</version>
+	</parent>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>4.1.6.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
-			<version>1.2.17</version>
+			<version>${log4j.version}</version>
 		</dependency>
 	</dependencies>
 </project>
